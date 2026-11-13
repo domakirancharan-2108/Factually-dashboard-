@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSM Department Dashboard | Vaagdevi College of Engineering</title>
+  <meta name="description" content="Departmental Governance & Intelligence Portal for Department of Computer Science & Engineering (AI & ML) - Vaagdevi College of Engineering (Autonomous).">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- ApexCharts CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+  <!-- Canvas Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. AUTHENTICATION SECTION (50% Opacity Campus & Auto-Scrolling College Info)
+       ========================================================================= -->
+  <div id="auth-section" class="auth-wrapper">
+    <!-- Left Hero Campus Showcase: 50% Opacity Background + Auto-scrolling College Information -->
+    <div class="auth-bg-split">
+      <!-- 50% Opacity Campus Image Background -->
+      <div class="auth-bg-image"></div>
+      <div class="auth-bg-overlay-tint"></div>
+
+      <!-- Auto-scrolling College Information Track -->
+      <div class="auth-scroll-container">
+        <div class="auth-scroll-track">
+          
+          <!-- Card 1: College Header & Accreditations -->
+          <div class="scroll-info-card">
+            <div class="scroll-info-header">
+              <div class="auth-logo-box">VCE</div>
+              <div>
+                <span class="scroll-info-badge"><i class="fa-solid fa-building-columns"></i> Established 1998</span>
+                <h1 class="scroll-info-title">VAAGDEVI COLLEGE OF ENGINEERING</h1>
+                <div class="scroll-info-subtitle">Autonomous Institution • Warangal</div>
+              </div>
+            </div>
+            <div class="scroll-info-list">
+              <div class="scroll-info-item">
+                <i class="fa-solid fa-award"></i>
+                <span><strong>Accreditation:</strong> NAAC A+ Grade Accredited (3.34 CGPA) & NBA Accredited Tier-1</span>
+              </div>
+              <div class="scroll-info-item">
+                <i class="fa-solid fa-certificate"></i>
+                <span><strong>Affiliation:</strong> Approved by AICTE, New Delhi & Affiliated to JNTUH, Hyderabad</span>
+              </div>
+              <div class="scroll-info-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span><strong>Campus Location:</strong> Bollikunta, Warangal - 506005, Telangana, India</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: CSM Department Overview -->
+          <div class="scroll-info-card">
+            <span class="scroll-info-badge" style="background: #2563eb;"><i class="fa-solid fa-brain"></i> Department of CSE (AI & ML)</span>
+            <h2 class="scroll-info-title mt-2">Department of Computer Science & Engineering (AI & ML) - CSM</h2>
+            <div class="scroll-info-list">
+              <div class="scroll-info-item">
+                <i class="fa-solid fa-microchip"></i>
+                <span><strong>Specialization:</strong> Artificial Intelligence, Machine Learning, Deep Neural Networks, NLP & Robotics</span>
+              </div>
+              <div class="scroll-info-item">
+                <i class="fa-solid fa-server"></i>
+                <span><strong>Supercomputing Infrastructure:</strong> NVIDIA RTX 4090 GPU Center & AICTE IDEA Innovation Lab</span>
+              </div>
+              <div class="scroll-info-item">
+                <i class="fa-solid fa-briefcase"></i>
+                <span><strong>Placements Velocity:</strong> Top Tier Recruiters including Amazon, Microsoft, TCS, Infosys & Wipro</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Research Velocity & Industry Alliances -->
+          <div class="scroll-info-card">
+            <span class="scroll-info-badge" style="background: #16a34a;"><i class="fa-solid fa-flask-vial"></i> Academic & Research Excellence</span>
+            <h3 class="scroll-info-title mt-2">Institutional Research & Industry Alliances</h3>
+            <div class="scroll-info-list">
+              <div class="scroll-info-item">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <span><strong>High-Impact Publications:</strong> IEEE Transactions, SCI & Scopus Indexed Research Papers</span>
+              </div>
+              <div class="scroll-info-item">
+                <i class="fa-solid fa-handshake"></i>
+                <span><strong>Global Tech Alliances:</strong> AWS Academy, NVIDIA Deep Learning Institute, Microsoft & IBM Cloud</span>
+              </div>
+              <div class="scroll-info-item">
+                <i class="fa-solid fa-trophy"></i>
+                <span><strong>Student Achievements:</strong> Smart India Hackathon Winners & National AI Fellowship Holders</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- DUPLICATE SET FOR INFINITE SMOOTH AUTO-SCROLL -->
+
+          <!-- Duplicate Card 1 -->
+          <div class="scroll-info-card">
+            <div class="scroll-info-header">
+              <div class="auth-logo-box">VCE</div>
+              <div>
+                <span class="scroll-info-badge"><i class="fa-solid fa-building-columns"></i> Established 1998</span>
+                <h1 class="scroll-info-title">VAAGDEVI COLLEGE OF ENGINEERING</h1>
+                <div class="scroll-info-subtitle">Autonomous Institution • Warangal</div>
+              </div>
+            </div>
+            <div class="scroll-info-list">
+              <div class="scroll-info-item">
+                <i class="fa-solid fa-award"></i>
+                <span><strong>Accreditation:</strong> NAAC A+ Grade Accredited (3.34 CGPA) & NBA Accredited Tier-1</span>
+              </div>
+              <div class="scroll-info-item">
+                <i class="fa-solid fa-certificate"></i>
+                <span><strong>Affiliation:</strong> Approved by AICTE, New Delhi & Affiliated to JNTUH, Hyderabad</span>
+              </div>
+              <div class="scroll-info-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span><strong>Campus Location:</strong> Bollikunta, Warangal - 506005, Telangana, India</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicate Card 2 -->
+          <div class="scroll-info-card">
+            <span class="scroll-info-badge" style="background: #2563eb;"><i class="fa-solid fa-brain"></i> Department of CSE (AI & ML)</span>
+            <h2 class="scroll-info-title mt-2">Department of Computer Science & Engineering (AI & ML) - CSM</h2>
+            <div class="scroll-info-list">
+              <div class="scroll-info-item">
+                <i class="fa-solid fa-microchip"></i>
+                <span><strong>Specialization:</strong> Artificial Intelligence, Machine Learning, Deep Neural Networks, NLP & Robotics</span>
+              </div>
+              <div class="scroll-info-item">
+                <i class="fa-solid fa-server"></i>
+                <span><strong>Supercomputing Infrastructure:</strong> NVIDIA RTX 4090 GPU Center & AICTE IDEA Innovation Lab</span>
+              </div>
+              <div class="scroll-info-item">
+                <i class="fa-solid fa-briefcase"></i>
+                <span><strong>Placements Velocity:</strong> Top Tier Recruiters including Amazon, Microsoft, TCS, Infosys & Wipro</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicate Card 3 -->
+          <div class="scroll-info-card">
+            <span class="scroll-info-badge" style="background: #16a34a;"><i class="fa-solid fa-flask-vial"></i> Academic & Research Excellence</span>
+            <h3 class="scroll-info-title mt-2">Institutional Research & Industry Alliances</h3>
+            <div class="scroll-info-list">
+              <div class="scroll-info-item">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <span><strong>High-Impact Publications:</strong> IEEE Transactions, SCI & Scopus Indexed Research Papers</span>
+              </div>
+              <div class="scroll-info-item">
+                <i class="fa-solid fa-handshake"></i>
+                <span><strong>Global Tech Alliances:</strong> AWS Academy, NVIDIA Deep Learning Institute, Microsoft & IBM Cloud</span>
+              </div>
+              <div class="scroll-info-item">
+                <i class="fa-solid fa-trophy"></i>
+                <span><strong>Student Achievements:</strong> Smart India Hackathon Winners & National AI Fellowship Holders</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Login & Register Form Container -->
+    <div class="auth-form-split">
+      <div class="auth-card-inner">
+
+        <!-- College Header Title -->
+        <div class="mb-4 text-center">
+          <h2 style="font-size: 1.25rem; font-weight: 900; color: var(--color-maroon-primary); margin-bottom: 2px;">
+            VAAGDEVI COLLEGE OF ENGINEERING
+          </h2>
+          <p style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+            Department of CSE (AI & ML) - CSM Portal
+          </p>
+        </div>
+        
+        <!-- MASTER PRINCIPAL DIRECT ACCESS BANNER (Principal View) -->
+        <div class="quick-login-box mb-4" style="background: rgba(139, 24, 32, 0.06); border: 1.5px solid rgba(139, 24, 32, 0.3); border-radius: 8px; padding: 12px 14px;">
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="text-xs font-bold text-maroon uppercase tracking-wide">
+                <i class="fa-solid fa-crown text-maroon"></i> Principal View
+              </div>
+              <div class="text-2xs text-muted">College Principal Master Security Access</div>
+            </div>
+            <button class="btn btn-sm btn-primary" onclick="App.openPrincipalPasswordModal()">
+              <i class="fa-solid fa-crown"></i> Principal View
+            </button>
+          </div>
+        </div>
+
+        <!-- Auth Tabs (Sign In vs Self-Registration for HOD & Faculty) -->
+        <div class="auth-tabs">
+          <button class="auth-tab-btn active" id="tab-btn-login" onclick="App.switchAuthTab('login')">
+            <i class="fa-solid fa-right-to-bracket"></i> Staff Sign In
+          </button>
+          <button class="auth-tab-btn" id="tab-btn-register" onclick="App.switchAuthTab('register')">
+            <i class="fa-solid fa-user-plus"></i> New Staff Register
+          </button>
+        </div>
+
+        <!-- TAB 1: LOGIN FORM (Removed Keep Me Logged In) -->
+        <div id="auth-tab-login">
+          <form id="login-form">
+            <div class="form-group">
+              <label class="form-label" for="login-identifier">College Email or Username</label>
+              <input type="text" class="form-control" id="login-identifier" placeholder="e.g. your_email@vaagdevi.edu.in" required>
+            </div>
+
+            <div class="form-group mb-4">
+              <div class="flex justify-between items-center mb-1">
+                <label class="form-label mb-0" for="login-password">Password</label>
+                <a href="javascript:void(0)" class="text-xs font-semibold text-maroon" onclick="App.openForgotPasswordModal()">
+                  Forgot Password?
+                </a>
+              </div>
+              <input type="password" class="form-control" id="login-password" placeholder="Enter your password" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fa-solid fa-arrow-right-to-bracket"></i> Sign In to Dashboard
+            </button>
+
+            <div class="mt-4 text-center">
+              <span class="text-xs text-muted">New Faculty or HOD?</span>
+              <a href="javascript:void(0)" class="text-xs font-bold text-maroon ml-1" onclick="App.switchAuthTab('register')">
+                Register Your Account
+              </a>
+            </div>
+          </form>
+        </div>
+
+        <!-- TAB 2: SELF-REGISTRATION FORM (Strict User Specified Formats) -->
+        <div id="auth-tab-register" class="hidden">
+          <form id="register-form">
+            <!-- Full Name: Total in CAPITAL LETTERS -->
+            <div class="form-group">
+              <label class="form-label" for="reg-name">
+                Full Name <span class="text-xs text-maroon font-bold">(IN CAPITAL LETTERS ONLY)</span>
+              </label>
+              <input type="text" class="form-control uppercase-input" id="reg-name" placeholder="E.G. DR. M. SURESH KUMAR" style="text-transform: uppercase;" required oninput="this.value = this.value.toUpperCase()">
+            </div>
+
+            <!-- College Email: Must be @vaagdevi.edu.in -->
+            <div class="form-group">
+              <label class="form-label" for="reg-email">
+                College Email ID <span class="text-xs text-muted font-normal">(@vaagdevi.edu.in)</span>
+              </label>
+              <input type="email" class="form-control" id="reg-email" placeholder="name@vaagdevi.edu.in" required>
+            </div>
+
+            <!-- Username: Combination of letters and numbers WITHOUT capital letters -->
+            <div class="form-group">
+              <label class="form-label" for="reg-username">
+                Username <span class="text-xs text-muted font-normal">(Lowercase letters & numbers only)</span>
+              </label>
+              <input type="text" class="form-control" id="reg-username" placeholder="e.g. suresh101 (no capital letters)" required oninput="this.value = this.value.toLowerCase()">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="reg-role">Role</label>
+                <select class="form-control" id="reg-role" required>
+                  <option value="faculty">Faculty Member</option>
+                  <option value="hod">Head of Department (HOD)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="reg-designation">Designation</label>
+                <select class="form-control" id="reg-designation" required>
+                  <option value="Assistant Professor">Assistant Professor</option>
+                  <option value="Associate Professor">Associate Professor</option>
+                  <option value="Professor">Professor</option>
+                  <option value="Professor & HOD">Professor & HOD</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <!-- Employee ID: 6 digit numbers only (Unique for everyone) -->
+              <div class="form-group">
+                <label class="form-label" for="reg-empid">
+                  Employee ID <span class="text-xs text-maroon font-bold">(6 Digits)</span>
+                </label>
+                <input type="text" class="form-control font-mono" id="reg-empid" placeholder="e.g. 108234" maxlength="6" pattern="\d{6}" inputmode="numeric" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="reg-phone">Contact Number</label>
+                <input type="tel" class="form-control" id="reg-phone" placeholder="+91 98480 00000">
+              </div>
+            </div>
+
+            <!-- Faculty Subject: Subjects in Department of CSM -->
+            <div class="form-group">
+              <label class="form-label" for="reg-subject">
+                Subject of the Faculty <span class="text-xs text-maroon font-bold">(CSM Department)</span>
+              </label>
+              <select class="form-control" id="reg-subject" required>
+                <option value="" disabled selected>-- Select CSM Department Subject Handled --</option>
+                <option value="Artificial Intelligence & Expert Systems">Artificial Intelligence & Expert Systems</option>
+                <option value="Machine Learning Algorithms & Applications">Machine Learning Algorithms & Applications</option>
+                <option value="Deep Learning & Neural Networks">Deep Learning & Neural Networks</option>
+                <option value="Natural Language Processing & LLMs">Natural Language Processing & Large Language Models (LLMs)</option>
+                <option value="Computer Vision & Image Processing">Computer Vision & Digital Image Processing</option>
+                <option value="Reinforcement Learning & Autonomous Systems">Reinforcement Learning & Autonomous Systems</option>
+                <option value="Data Science & Big Data Analytics">Data Science & Big Data Analytics</option>
+                <option value="Cloud AI Architecture & MLOps">Cloud AI Architecture & MLOps</option>
+                <option value="Generative AI & Prompt Engineering">Generative AI & Prompt Engineering</option>
+                <option value="Python Programming for AI & ML">Python Programming for AI & ML</option>
+                <option value="Robotics & Edge AI Computing">Robotics & Edge AI Computing</option>
+                <option value="AI Ethics, Governance & Security">AI Ethics, Governance & Security</option>
+              </select>
+            </div>
+
+            <!-- Password & Re-enter Password -->
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="reg-password">Password</label>
+                <input type="password" class="form-control" id="reg-password" placeholder="Create password (min 6)" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="reg-confirm-password">Re-enter Password</label>
+                <input type="password" class="form-control" id="reg-confirm-password" placeholder="Confirm password" required>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              <i class="fa-solid fa-user-plus"></i> Submit Registration for Verification
+            </button>
+            <div class="text-2xs text-muted text-center mt-2">
+              <i class="fa-solid fa-shield"></i> Submissions are sent for approval to the Principal (for HOD) or HOD & Principal (for Faculty).
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       2. MAIN DASHBOARD SHELL
+       ========================================================================= -->
+  <div id="app-shell" class="app-container hidden">
+
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="sidebar" id="sidebar-nav">
+      <div class="sidebar-header">
+        <div class="college-emblem">
+          <span class="college-emblem-text">VCE</span>
+        </div>
+        <div class="college-title-group">
+          <h1>VAAGDEVI</h1>
+          <div class="college-tagline">COLLEGE OF ENGINEERING</div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Core Intelligence</div>
+        
+        <button class="sidebar-nav-item active" data-tab="overview" onclick="Dashboard.renderTab('overview')">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Dashboard Overview</span>
+        </button>
+
+        <button class="sidebar-nav-item" data-tab="faculty-activities" onclick="Dashboard.renderTab('faculty-activities')">
+          <i class="fa-solid fa-chalkboard-user"></i>
+          <span>Faculty Activities</span>
+        </button>
+
+        <button class="sidebar-nav-item" data-tab="student-achievements" onclick="Dashboard.renderTab('student-achievements')">
+          <i class="fa-solid fa-trophy"></i>
+          <span>Student Achievements</span>
+        </button>
+
+        <button class="sidebar-nav-item" data-tab="publications" onclick="Dashboard.renderTab('publications')">
+          <i class="fa-solid fa-book-bookmark"></i>
+          <span>Publications (Scopus/SCI)</span>
+        </button>
+
+        <button class="sidebar-nav-item" data-tab="research-grants" onclick="Dashboard.renderTab('research-grants')">
+          <i class="fa-solid fa-flask-vial"></i>
+          <span>Research & Grants</span>
+        </button>
+
+        <button class="sidebar-nav-item" data-tab="placements" onclick="Dashboard.renderTab('placements')">
+          <i class="fa-solid fa-briefcase"></i>
+          <span>Placements & Careers</span>
+        </button>
+
+        <button class="sidebar-nav-item" data-tab="laboratories" onclick="Dashboard.renderTab('laboratories')">
+          <i class="fa-solid fa-server"></i>
+          <span>Laboratory Utilization</span>
+        </button>
+
+        <button class="sidebar-nav-item" data-tab="events" onclick="Dashboard.renderTab('events')">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>Events & Conferences</span>
+        </button>
+
+        <div class="nav-section-title">Institutional Quality</div>
+
+        <button class="sidebar-nav-item" data-tab="accreditation" onclick="Dashboard.renderTab('accreditation')">
+          <i class="fa-solid fa-certificate"></i>
+          <span>Accreditation (NBA/NAAC)</span>
+        </button>
+
+        <button class="sidebar-nav-item" data-tab="kpi-monitoring" onclick="Dashboard.renderTab('kpi-monitoring')">
+          <i class="fa-solid fa-chart-line"></i>
+          <span>KPI Monitoring & Logs</span>
+        </button>
+
+        <button class="sidebar-nav-item" data-tab="faculty-directory" onclick="Dashboard.renderTab('faculty-directory')">
+          <i class="fa-solid fa-users"></i>
+          <span>Faculty Roster</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+          <span>Department:</span>
+          <span class="badge badge-purple font-mono">CSE (AI & ML)</span>
+        </div>
+        <button class="btn btn-outline btn-block btn-sm mb-2" style="color: #f8fafc; border-color: rgba(255,255,255,0.2);" onclick="App.openEditOwnProfileModal()" title="Edit your profile details">
+          <i class="fa-solid fa-user-gear"></i> Edit My Profile
+        </button>
+        <button class="btn btn-outline btn-block btn-sm" style="color: #f8fafc; border-color: rgba(255,255,255,0.2);" onclick="App.logout()">
+          <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+        </button>
+      </div>
+    </aside>
+
+
+    <!-- MAIN CONTENT WRAPPER -->
+    <main class="main-wrapper">
+
+      <!-- TOP NAVBAR -->
+      <header class="top-navbar">
+        <div class="navbar-left">
+          <button class="nav-toggle-btn" onclick="App.toggleSidebarMobile()" aria-label="Toggle Sidebar">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="dept-badge-title">
+            <i class="fa-solid fa-brain"></i>
+            <span>CSM Department Intelligence & Governance</span>
+          </div>
+        </div>
+
+        <div class="navbar-right">
+          <!-- MongoDB Atlas Live Connection Status -->
+          <div id="header-mongo-badge" class="mongo-badge mongo-badge-connected" title="Connected to MongoDB Atlas: department--dashboard.eibmzx4.mongodb.net">
+            <span class="mongo-dot"></span> <i class="fa-solid fa-database"></i> <span class="mongo-label">MongoDB Atlas</span>
+          </div>
+
+          <!-- Pending Notification Bell -->
+          <button class="btn-icon" onclick="Dashboard.renderTab('overview')" title="Pending Registration Approvals" style="position: relative;">
+            <i class="fa-solid fa-bell"></i>
+            <span id="header-notif-badge" class="badge-notif-count hidden">0</span>
+          </button>
+
+          <!-- Principal Password Change Button (Only visible on Principal page) -->
+          <button id="header-principal-pw-btn" class="btn btn-xs btn-outline hidden" onclick="App.openChangePrincipalPasswordModal()" title="Change Principal Master Password">
+            <i class="fa-solid fa-key text-maroon"></i> Change Password
+          </button>
+
+          <!-- Theme Toggle -->
+          <button class="btn-icon" onclick="App.toggleTheme()" title="Toggle Theme" aria-label="Toggle Dark/Light Mode">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+
+          <!-- User Profile Widget (Click to Edit Own Profile) -->
+          <div class="user-profile-widget" onclick="App.openEditOwnProfileModal()" title="Click to view & edit your profile details" role="button" tabindex="0">
+            <img src="" id="header-user-avatar" class="user-avatar-img" alt="User Avatar">
+            <div class="user-details">
+              <span class="user-name-text" id="header-user-name">Loading...</span>
+              <span class="user-role-text" id="header-user-role">Administrator</span>
+            </div>
+            <div id="header-role-badge"></div>
+            <button type="button" class="btn-edit-profile-mini" title="Edit My Profile" aria-label="Edit My Profile">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- CONTENT BODY -->
+      <div class="content-body">
+        <div id="role-indicator-banner"></div>
+        <div id="main-content-area"></div>
+      </div>
+
+    </main>
+
+  </div>
+
+
+  <!-- =========================================================================
+       3. MODAL DIALOGS
+       ========================================================================= -->
+
+  <!-- MODAL: EDIT OWN PROFILE (Available for all logged-in users: Faculty, HOD, Principal) -->
+  <div class="modal-overlay" id="modalEditOwnProfile">
+    <div class="modal-box" style="max-width: 640px;">
+      <div class="modal-header" style="background: rgba(139, 24, 32, 0.08);">
+        <h3><i class="fa-solid fa-user-gear text-maroon"></i> Edit My Profile Details</h3>
+        <button class="modal-close-btn" onclick="App.closeModal('modalEditOwnProfile')">&times;</button>
+      </div>
+      <form id="formEditOwnProfile">
+        <input type="hidden" id="myprofile-id">
+        <div class="modal-body" style="max-height: 72vh; overflow-y: auto; padding-right: 14px;">
+          <p class="text-xs text-slate-600 mb-3">
+            Update your personal details, credentials, academic workload, and department profile information.
+          </p>
+
+          <!-- Avatar selection & preview -->
+          <div class="profile-avatar-edit-box mb-4">
+            <img src="" id="myprofile-avatar-preview" class="avatar-preview-lg" alt="Avatar Preview">
+            <div class="avatar-edit-details">
+              <label class="form-label mb-1 font-bold text-xs">Profile Picture / Avatar</label>
+              <div class="flex gap-2 items-center flex-wrap">
+                <button type="button" class="btn btn-xs btn-outline" onclick="App.generateNewMyAvatar()">
+                  <i class="fa-solid fa-dice"></i> Randomize Avatar
+                </button>
+                <button type="button" class="btn btn-xs btn-outline" onclick="App.toggleAvatarUrlInput()">
+                  <i class="fa-solid fa-link"></i> Custom URL
+                </button>
+              </div>
+              <input type="hidden" id="myprofile-avatar">
+              <input type="url" id="myprofile-avatar-url" class="form-control form-control-xs mt-2 hidden" placeholder="Paste custom image URL (e.g. https://...)" oninput="App.previewCustomAvatar(this.value)">
+            </div>
+          </div>
+
+          <!-- Full Name -->
+          <div class="form-group">
+            <label class="form-label" for="myprofile-name">Full Name <span class="text-xs text-maroon font-bold">(IN CAPITAL LETTERS)</span></label>
+            <input type="text" class="form-control font-semibold" id="myprofile-name" placeholder="E.G. DR. K. RAMESH KUMAR" style="text-transform: uppercase;" required oninput="this.value = this.value.toUpperCase()">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="myprofile-email">College Email ID</label>
+              <input type="email" class="form-control" id="myprofile-email" placeholder="name@vaagdevi.edu.in" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="myprofile-username">Username <span class="text-xs text-muted font-normal">(Lowercase + numbers)</span></label>
+              <input type="text" class="form-control" id="myprofile-username" placeholder="ramesh106" required oninput="this.value = this.value.toLowerCase()">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="myprofile-empid">Employee ID <span class="text-xs text-maroon font-bold">(6 Digits)</span></label>
+              <input type="text" class="form-control font-mono font-bold" id="myprofile-empid" maxlength="6" pattern="\d{6}" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="myprofile-designation">Designation</label>
+              <select class="form-control" id="myprofile-designation" required>
+                <option value="Assistant Professor">Assistant Professor</option>
+                <option value="Associate Professor">Associate Professor</option>
+                <option value="Professor">Professor</option>
+                <option value="Professor & HOD">Professor & HOD</option>
+                <option value="Principal & Professor">Principal & Professor</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="myprofile-qualification">Qualification / Highest Degree</label>
+              <input type="text" class="form-control" id="myprofile-qualification" placeholder="e.g. Ph.D in Computer Science / M.Tech">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="myprofile-phone">Contact Phone Number</label>
+              <input type="tel" class="form-control" id="myprofile-phone" placeholder="+91 98480 00000">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="myprofile-subject">Subject Handled (CSM Department)</label>
+              <select class="form-control" id="myprofile-subject" required>
+                <option value="Artificial Intelligence & Expert Systems">Artificial Intelligence & Expert Systems</option>
+                <option value="Machine Learning Algorithms & Applications">Machine Learning Algorithms & Applications</option>
+                <option value="Deep Learning & Neural Networks">Deep Learning & Neural Networks</option>
+                <option value="Natural Language Processing & LLMs">Natural Language Processing & Large Language Models (LLMs)</option>
+                <option value="Computer Vision & Image Processing">Computer Vision & Digital Image Processing</option>
+                <option value="Reinforcement Learning & Autonomous Systems">Reinforcement Learning & Autonomous Systems</option>
+                <option value="Data Science & Big Data Analytics">Data Science & Big Data Analytics</option>
+                <option value="Cloud AI Architecture & MLOps">Cloud AI Architecture & MLOps</option>
+                <option value="Generative AI & Prompt Engineering">Generative AI & Prompt Engineering</option>
+                <option value="Python Programming for AI & ML">Python Programming for AI & ML</option>
+                <option value="Robotics & Edge AI Computing">Robotics & Edge AI Computing</option>
+                <option value="AI Ethics, Governance & Security">AI Ethics, Governance & Security</option>
+                <option value="AI & Institutional Governance">AI & Institutional Governance</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="myprofile-workload">Teaching Workload</label>
+              <input type="text" class="form-control" id="myprofile-workload" placeholder="e.g. 16 hrs/week">
+            </div>
+          </div>
+
+          <!-- Collapsible Change Password Section -->
+          <div class="card p-3 my-3" style="background: rgba(139, 24, 32, 0.04); border: 1px solid rgba(139, 24, 32, 0.15); border-radius: var(--radius-md);">
+            <div class="flex justify-between items-center cursor-pointer" onclick="App.toggleChangePasswordSection()" style="user-select: none;">
+              <div class="font-bold text-xs text-slate-800 flex items-center gap-2">
+                <i class="fa-solid fa-key text-maroon"></i> Change Account Password <span class="text-2xs text-muted font-normal">(Optional)</span>
+              </div>
+              <i class="fa-solid fa-chevron-down text-xs text-muted" id="myprofile-pass-chevron"></i>
+            </div>
+            <div id="myprofile-password-fields" class="hidden mt-3 pt-2" style="border-top: 1px dashed rgba(139, 24, 32, 0.2);">
+              <div class="form-group mb-2">
+                <label class="form-label text-xs" for="myprofile-current-pass">Current Password</label>
+                <input type="password" class="form-control font-mono form-control-sm" id="myprofile-current-pass" placeholder="Enter current password to verify">
+              </div>
+              <div class="form-row">
+                <div class="form-group mb-2">
+                  <label class="form-label text-xs" for="myprofile-new-pass">New Password</label>
+                  <input type="password" class="form-control font-mono form-control-sm" id="myprofile-new-pass" placeholder="Min 6 characters">
+                </div>
+                <div class="form-group mb-2">
+                  <label class="form-label text-xs" for="myprofile-confirm-new-pass">Confirm New Password</label>
+                  <input type="password" class="form-control font-mono form-control-sm" id="myprofile-confirm-new-pass" placeholder="Re-enter new password">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="App.closeModal('modalEditOwnProfile')">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="btn-save-own-profile">
+            <i class="fa-solid fa-floppy-disk"></i> Save Profile Changes
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- MODAL: PRINCIPAL PASSWORD AUTH (Requires KIRANCHARAN123) -->
+  <div class="modal-overlay" id="modalPrincipalAuth">
+    <div class="modal-box" style="max-width: 440px;">
+      <div class="modal-header" style="background: rgba(139, 24, 32, 0.08);">
+        <h3><i class="fa-solid fa-shield-halved text-maroon"></i> Principal Master Access</h3>
+        <button class="modal-close-btn" onclick="App.closeModal('modalPrincipalAuth')">&times;</button>
+      </div>
+      <form id="formPrincipalAuth">
+        <div class="modal-body">
+          <p class="text-sm text-slate-700 mb-3">
+            Please enter the official College Principal security master password to access full institutional governance.
+          </p>
+          <div class="form-group">
+            <label class="form-label" for="principal-master-password">Principal Master Password</label>
+            <input type="password" class="form-control font-mono font-bold" id="principal-master-password" placeholder="Enter Principal Password" required autocomplete="current-password">
+          </div>
+          <div class="text-2xs text-muted">
+            <i class="fa-solid fa-lock"></i> Protected: Authorized for Principal Dr. K. Prakash only.
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="App.closeModal('modalPrincipalAuth')">Cancel</button>
+          <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-unlock-keyhole"></i> Verify & Authenticate
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- MODAL: CHANGE PRINCIPAL MASTER PASSWORD (Available on Principal Page Only) -->
+  <div class="modal-overlay" id="modalChangePrincipalPassword">
+    <div class="modal-box" style="max-width: 440px;">
+      <div class="modal-header" style="background: rgba(139, 24, 32, 0.08);">
+        <h3><i class="fa-solid fa-key text-maroon"></i> Change Principal Master Password</h3>
+        <button class="modal-close-btn" onclick="App.closeModal('modalChangePrincipalPassword')">&times;</button>
+      </div>
+      <form id="formChangePrincipalPassword">
+        <div class="modal-body">
+          <p class="text-xs text-slate-600 mb-3">
+            Change your official College Principal master password. This will update your login credentials immediately for future logins.
+          </p>
+          <div class="form-group">
+            <label class="form-label" for="principal-current-password">Current Master Password</label>
+            <input type="password" class="form-control font-mono font-bold" id="principal-current-password" placeholder="Enter current master password" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="principal-new-password">New Master Password</label>
+            <input type="password" class="form-control font-mono font-bold" id="principal-new-password" placeholder="Minimum 6 characters" minlength="6" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="principal-confirm-new-password">Confirm New Password</label>
+            <input type="password" class="form-control font-mono font-bold" id="principal-confirm-new-password" placeholder="Re-enter new master password" minlength="6" required>
+          </div>
+          <div class="text-2xs text-muted">
+            <i class="fa-solid fa-shield-halved"></i> Protected: Only the College Principal can update this master password on their page.
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="App.closeModal('modalChangePrincipalPassword')">Cancel</button>
+          <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-floppy-disk"></i> Update Password
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- MODAL: ADD STAFF (Principal can add HOD/Faculty; HOD can add Faculty) -->
+  <div class="modal-overlay" id="modalAddStaff">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-user-plus text-maroon"></i> Add New Department Staff</h3>
+        <button class="modal-close-btn" onclick="App.closeModal('modalAddStaff')">&times;</button>
+      </div>
+      <form id="formAddStaff">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label" for="staff-add-name">Full Name <span class="text-xs text-maroon font-bold">(IN CAPITAL LETTERS)</span></label>
+            <input type="text" class="form-control" id="staff-add-name" placeholder="E.G. DR. K. RAMESH KUMAR" style="text-transform: uppercase;" required oninput="this.value = this.value.toUpperCase()">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="staff-add-email">College Email ID</label>
+              <input type="email" class="form-control" id="staff-add-email" placeholder="name@vaagdevi.edu.in" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="staff-add-username">Username <span class="text-xs text-muted font-normal">(Lowercase + numbers)</span></label>
+              <input type="text" class="form-control" id="staff-add-username" placeholder="ramesh106" required oninput="this.value = this.value.toLowerCase()">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="staff-add-role">Role</label>
+              <select class="form-control" id="staff-add-role" required>
+                <option value="faculty">Faculty Member</option>
+                <option value="hod">Head of Department (HOD)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="staff-add-designation">Designation</label>
+              <select class="form-control" id="staff-add-designation" required>
+                <option value="Assistant Professor">Assistant Professor</option>
+                <option value="Associate Professor">Associate Professor</option>
+                <option value="Professor">Professor</option>
+                <option value="Professor & HOD">Professor & HOD</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="staff-add-empid">Employee ID <span class="text-xs text-maroon font-bold">(6 Digits)</span></label>
+              <input type="text" class="form-control font-mono" id="staff-add-empid" placeholder="e.g. 108235" maxlength="6" pattern="\d{6}" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="staff-add-phone">Contact Number</label>
+              <input type="tel" class="form-control" id="staff-add-phone" placeholder="+91 98480 00000">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="staff-add-subject">Subject Handled (CSM Department)</label>
+            <select class="form-control" id="staff-add-subject" required>
+              <option value="Artificial Intelligence & Expert Systems">Artificial Intelligence & Expert Systems</option>
+              <option value="Machine Learning Algorithms & Applications">Machine Learning Algorithms & Applications</option>
+              <option value="Deep Learning & Neural Networks">Deep Learning & Neural Networks</option>
+              <option value="Natural Language Processing & LLMs">Natural Language Processing & Large Language Models (LLMs)</option>
+              <option value="Computer Vision & Image Processing">Computer Vision & Digital Image Processing</option>
+              <option value="Reinforcement Learning & Autonomous Systems">Reinforcement Learning & Autonomous Systems</option>
+              <option value="Data Science & Big Data Analytics">Data Science & Big Data Analytics</option>
+              <option value="Cloud AI Architecture & MLOps">Cloud AI Architecture & MLOps</option>
+              <option value="Generative AI & Prompt Engineering">Generative AI & Prompt Engineering</option>
+              <option value="Python Programming for AI & ML">Python Programming for AI & ML</option>
+              <option value="Robotics & Edge AI Computing">Robotics & Edge AI Computing</option>
+              <option value="AI Ethics, Governance & Security">AI Ethics, Governance & Security</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="staff-add-password">Initial Password</label>
+            <input type="password" class="form-control" id="staff-add-password" placeholder="Default: password123">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="App.closeModal('modalAddStaff')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save & Activate Staff</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- MODAL: EDIT FACULTY / STAFF (Principal or HOD editing faculty) -->
+  <div class="modal-overlay" id="modalEditStaff">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modal-edit-staff-title"><i class="fa-solid fa-user-pen text-maroon"></i> Edit Faculty Information</h3>
+        <button class="modal-close-btn" onclick="App.closeModal('modalEditStaff')">&times;</button>
+      </div>
+      <form id="formEditStaff">
+        <input type="hidden" id="staff-edit-id">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label" for="staff-edit-name">Full Name <span class="text-xs text-maroon font-bold">(IN CAPITAL LETTERS)</span></label>
+            <input type="text" class="form-control" id="staff-edit-name" style="text-transform: uppercase;" required oninput="this.value = this.value.toUpperCase()">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="staff-edit-email">College Email ID</label>
+              <input type="email" class="form-control" id="staff-edit-email" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="staff-edit-username">Username</label>
+              <input type="text" class="form-control" id="staff-edit-username" required oninput="this.value = this.value.toLowerCase()">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group" id="staff-edit-role-container">
+              <label class="form-label" for="staff-edit-role">Role</label>
+              <select class="form-control" id="staff-edit-role">
+                <option value="faculty">Faculty Member</option>
+                <option value="hod">Head of Department (HOD)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="staff-edit-designation">Designation</label>
+              <select class="form-control" id="staff-edit-designation" required>
+                <option value="Assistant Professor">Assistant Professor</option>
+                <option value="Associate Professor">Associate Professor</option>
+                <option value="Professor">Professor</option>
+                <option value="Professor & HOD">Professor & HOD</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="staff-edit-empid">Employee ID <span class="text-xs text-maroon font-bold">(6 Digits)</span></label>
+              <input type="text" class="form-control font-mono" id="staff-edit-empid" maxlength="6" pattern="\d{6}" required oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="staff-edit-qualification">Qualification / Highest Degree</label>
+              <input type="text" class="form-control" id="staff-edit-qualification" placeholder="e.g. Ph.D (AI & ML) / M.Tech">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="staff-edit-subject">Subject Handled (CSM Department)</label>
+            <select class="form-control" id="staff-edit-subject" required>
+              <option value="Artificial Intelligence & Expert Systems">Artificial Intelligence & Expert Systems</option>
+              <option value="Machine Learning Algorithms & Applications">Machine Learning Algorithms & Applications</option>
+              <option value="Deep Learning & Neural Networks">Deep Learning & Neural Networks</option>
+              <option value="Natural Language Processing & LLMs">Natural Language Processing & Large Language Models (LLMs)</option>
+              <option value="Computer Vision & Image Processing">Computer Vision & Digital Image Processing</option>
+              <option value="Reinforcement Learning & Autonomous Systems">Reinforcement Learning & Autonomous Systems</option>
+              <option value="Data Science & Big Data Analytics">Data Science & Big Data Analytics</option>
+              <option value="Cloud AI Architecture & MLOps">Cloud AI Architecture & MLOps</option>
+              <option value="Generative AI & Prompt Engineering">Generative AI & Prompt Engineering</option>
+              <option value="Python Programming for AI & ML">Python Programming for AI & ML</option>
+              <option value="Robotics & Edge AI Computing">Robotics & Edge AI Computing</option>
+              <option value="AI Ethics, Governance & Security">AI Ethics, Governance & Security</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="staff-edit-workload">Teaching Workload</label>
+              <input type="text" class="form-control" id="staff-edit-workload" placeholder="e.g. 16 hrs/week">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="staff-edit-phone">Contact Phone</label>
+              <input type="tel" class="form-control" id="staff-edit-phone" placeholder="+91 98480 00000">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="staff-edit-password">New Password (leave blank to keep unchanged)</label>
+            <input type="password" class="form-control" id="staff-edit-password" placeholder="••••••••">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="App.closeModal('modalEditStaff')">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="btn-update-faculty-info">
+            <i class="fa-solid fa-floppy-disk"></i> Update Faculty Information
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- MODAL: FORGOT PASSWORD (OTP Verification Flow) -->
+  <div class="modal-overlay" id="modalForgotPassword">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-key text-maroon"></i> Password Recovery & Email Verification</h3>
+        <button class="modal-close-btn" onclick="App.closeModal('modalForgotPassword')">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div id="forgot-step-1">
+          <p class="text-sm text-muted mb-4">
+            Enter your registered Vaagdevi College email ID. A 6-digit security verification OTP will be generated.
+          </p>
+          <div class="form-group">
+            <label class="form-label" for="forgot-email">Registered Email Address</label>
+            <input type="email" class="form-control" id="forgot-email" placeholder="e.g. name@vaagdevi.edu.in">
+          </div>
+          <button type="button" class="btn btn-primary btn-block" id="btn-send-otp">
+            <i class="fa-solid fa-paper-plane"></i> Send Verification Code
+          </button>
+        </div>
+
+        <div id="forgot-step-2" class="hidden">
+          <div id="forgot-user-greeting" class="text-sm font-semibold text-slate-800 mb-3"></div>
+          <div id="simulated-otp-display"></div>
+
+          <div class="form-group">
+            <label class="form-label" for="forgot-otp">Enter 6-Digit OTP</label>
+            <input type="text" class="form-control font-mono font-bold text-center" id="forgot-otp" maxlength="6" placeholder="• • • • • •" style="letter-spacing: 4px; font-size: 1.2rem;">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="forgot-new-pass">New Password</label>
+            <input type="password" class="form-control" id="forgot-new-pass" placeholder="Create new strong password">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="forgot-confirm-pass">Confirm New Password</label>
+            <input type="password" class="form-control" id="forgot-confirm-pass" placeholder="Re-type new password">
+          </div>
+
+          <button type="button" class="btn btn-primary btn-block" id="btn-reset-password">
+            <i class="fa-solid fa-lock-open"></i> Reset Password & Return to Login
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MODAL: ADD FACULTY ACTIVITY -->
+  <div class="modal-overlay" id="modalAddActivity">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-chalkboard-user text-maroon"></i> Submit Faculty Activity</h3>
+        <button class="modal-close-btn" onclick="App.closeModal('modalAddActivity')">&times;</button>
+      </div>
+      <form id="formAddActivity">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label">Activity Category</label>
+            <select class="form-control" id="act-category" required>
+              <option value="FDP">Faculty Development Program (FDP)</option>
+              <option value="Certification">Professional Certification (NVIDIA/AWS/Azure)</option>
+              <option value="Workshop">Hands-on Workshop</option>
+              <option value="Patent">Patent / Intellectual Property</option>
+              <option value="Guest Lecture">Invited Guest Lecture / Keynote</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Activity Title</label>
+            <input type="text" class="form-control" id="act-title" placeholder="e.g. 5-Day National FDP on Generative AI" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Organizing Institution / Agency</label>
+            <input type="text" class="form-control" id="act-organizer" placeholder="e.g. IIT Madras / AICTE ATAL" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Duration</label>
+              <input type="text" class="form-control" id="act-duration" placeholder="e.g. 5 Days" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Date</label>
+              <input type="date" class="form-control" id="act-date" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">API Credit Points Claimed</label>
+            <input type="number" class="form-control" id="act-credits" value="3" min="1" max="25" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="App.closeModal('modalAddActivity')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Submit Activity</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- MODAL: ADD PUBLICATION -->
+  <div class="modal-overlay" id="modalAddPublication">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-book-bookmark text-maroon"></i> Add Research Publication</h3>
+        <button class="modal-close-btn" onclick="App.closeModal('modalAddPublication')">&times;</button>
+      </div>
+      <form id="formAddPublication">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label">Paper Title</label>
+            <input type="text" class="form-control" id="pub-title" placeholder="Full research paper title" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Authors List</label>
+            <input type="text" class="form-control" id="pub-authors" placeholder="e.g. Dr. Name, Co-Author Name" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Journal / Conference</label>
+              <input type="text" class="form-control" id="pub-journal" placeholder="e.g. IEEE Transactions on AI" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Indexing Tier</label>
+              <select class="form-control" id="pub-indexing" required>
+                <option value="SCI / Scopus Q1">SCI / Scopus Q1</option>
+                <option value="SCI / Scopus Q2">SCI / Scopus Q2</option>
+                <option value="Scopus / ESCI">Scopus / ESCI</option>
+                <option value="IEEE Conference">IEEE Conference</option>
+                <option value="Springer / ACM">Springer / ACM</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Impact Factor (IF)</label>
+              <input type="text" class="form-control" id="pub-impact" placeholder="e.g. 5.8 or Indexed" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Citations</label>
+              <input type="number" class="form-control" id="pub-citations" value="0" min="0">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Publication Year</label>
+              <input type="number" class="form-control" id="pub-year" value="2026" min="2020" max="2027" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Month</label>
+              <input type="text" class="form-control" id="pub-month" placeholder="e.g. January">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">DOI / Paper URL</label>
+            <input type="text" class="form-control" id="pub-doi" placeholder="10.1109/xxxx">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="App.closeModal('modalAddPublication')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Publication</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- MODAL: ADD STUDENT ACHIEVEMENT -->
+  <div class="modal-overlay" id="modalAddAchievement">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-trophy text-amber"></i> Log Student Achievement</h3>
+        <button class="modal-close-btn" onclick="App.closeModal('modalAddAchievement')">&times;</button>
+      </div>
+      <form id="formAddAchievement">
+        <div class="modal-body">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Student Name(s)</label>
+              <input type="text" class="form-control" id="ach-student" placeholder="e.g. Student Name & Team" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Roll Number</label>
+              <input type="text" class="form-control" id="ach-roll" placeholder="23VCE-CSM-042" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Year of Study</label>
+              <select class="form-control" id="ach-year" required>
+                <option value="1st Year">1st Year</option>
+                <option value="2nd Year">2nd Year</option>
+                <option value="3rd Year" selected>3rd Year</option>
+                <option value="4th Year">4th Year</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Category</label>
+              <select class="form-control" id="ach-category" required>
+                <option value="National Hackathon">National Hackathon</option>
+                <option value="International Fellowship">International Fellowship</option>
+                <option value="Corporate Challenge">Corporate Challenge</option>
+                <option value="IEEE Technical">IEEE Technical Contest</option>
+                <option value="Data Science Global">Data Science Global</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Competition Name</label>
+            <input type="text" class="form-control" id="ach-comp" placeholder="e.g. Smart India Hackathon (SIH 2026)" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Award / Prize Amount</label>
+            <input type="text" class="form-control" id="ach-award" placeholder="e.g. 1st Prize - ₹1,00,000 Cash Award" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Project Title</label>
+            <input type="text" class="form-control" id="ach-title" placeholder="Project or Solution Title" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Faculty Mentor</label>
+            <input type="text" class="form-control" id="ach-mentor" placeholder="Faculty member who guided">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="App.closeModal('modalAddAchievement')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Achievement</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- MODAL: ADD EVENT -->
+  <div class="modal-overlay" id="modalAddEvent">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-calendar-plus text-maroon"></i> Create Department Event</h3>
+        <button class="modal-close-btn" onclick="App.closeModal('modalAddEvent')">&times;</button>
+      </div>
+      <form id="formAddEvent">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label">Event Title</label>
+            <input type="text" class="form-control" id="evt-title" placeholder="e.g. National Symposium on Deep Learning" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Category</label>
+              <select class="form-control" id="evt-cat" required>
+                <option value="International Conference">International Conference</option>
+                <option value="Hackathon">Hackathon</option>
+                <option value="FDP">Faculty Enablement (FDP)</option>
+                <option value="Guest Lecture">Industry Guest Lecture</option>
+                <option value="Bootcamp">Student Bootcamp</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Dates</label>
+              <input type="text" class="form-control" id="evt-date" placeholder="e.g. 2026-04-15" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Venue</label>
+              <input type="text" class="form-control" id="evt-venue" placeholder="e.g. Seminar Hall / Lab" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Coordinator</label>
+              <input type="text" class="form-control" id="evt-coord" placeholder="Coordinator Name" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Budget</label>
+            <input type="text" class="form-control" id="evt-budget" placeholder="e.g. ₹50,000" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Description</label>
+            <textarea class="form-control" id="evt-desc" rows="2" placeholder="Brief details..."></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="App.closeModal('modalAddEvent')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Schedule Event</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- MODAL: ADD RESEARCH GRANT -->
+  <div class="modal-overlay" id="modalAddGrant">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-flask-vial text-maroon"></i> Submit Research Grant</h3>
+        <button class="modal-close-btn" onclick="App.closeModal('modalAddGrant')">&times;</button>
+      </div>
+      <form id="formAddGrant">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label">Project Title</label>
+            <input type="text" class="form-control" id="grt-title" placeholder="Grant Project Title" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Funding Agency</label>
+              <input type="text" class="form-control" id="grt-agency" placeholder="e.g. DST SERB, AICTE, DRDO" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Sanction Amount (₹)</label>
+              <input type="text" class="form-control" id="grt-amount" placeholder="e.g. ₹25,00,000" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Principal Investigator (PI)</label>
+              <input type="text" class="form-control" id="grt-pi" placeholder="PI Name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Duration</label>
+              <input type="text" class="form-control" id="grt-dur" placeholder="e.g. 2026 - 2029 (3 Years)" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Sanction Order #</label>
+            <input type="text" class="form-control" id="grt-order" placeholder="e.g. DST/SERB/2026/01" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Utilization Progress (%)</label>
+            <input type="number" class="form-control" id="grt-util" value="0" min="0" max="100">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="App.closeModal('modalAddGrant')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Grant</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- MODAL: ADD PLACEMENT -->
+  <div class="modal-overlay" id="modalAddPlacement">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-briefcase text-maroon"></i> Record Student Placement Offer</h3>
+        <button class="modal-close-btn" onclick="App.closeModal('modalAddPlacement')">&times;</button>
+      </div>
+      <form id="formAddPlacement">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label">Student Name</label>
+            <input type="text" class="form-control" id="plc-student" placeholder="e.g. K. Sai Varun" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Recruiting Company</label>
+              <input type="text" class="form-control" id="plc-company" placeholder="e.g. Amazon / Microsoft / TCS" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">CTC Package</label>
+              <input type="text" class="form-control" id="plc-ctc" placeholder="e.g. 14.5 LPA" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Job Role / Designation</label>
+            <input type="text" class="form-control" id="plc-role" placeholder="e.g. AI / ML Engineer" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="App.closeModal('modalAddPlacement')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Placement Record</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- MODAL: BOOK LAB SLOT -->
+  <div class="modal-overlay" id="modalBookLab">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-server text-maroon"></i> Book AI Lab Session</h3>
+        <button class="modal-close-btn" onclick="App.closeModal('modalBookLab')">&times;</button>
+      </div>
+      <form id="formBookLab">
+        <div class="modal-body">
+          <div class="form-group">
+            <label class="form-label">Select Laboratory</label>
+            <select class="form-control" id="book-lab-id" required>
+              <option value="lab_01">NVIDIA AI & GPU Supercomputing Center</option>
+              <option value="lab_02">Machine Learning & Predictive Analytics Lab</option>
+              <option value="lab_03">Computer Vision & Robotics AI Innovation Lab</option>
+              <option value="lab_04">Cloud AI & Big Data Analytics Laboratory</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Faculty In-Charge</label>
+            <input type="text" class="form-control" id="book-faculty" placeholder="Faculty Name" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Student Batch</label>
+              <input type="text" class="form-control" id="book-batch" placeholder="e.g. CSM 3rd Year" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Time Slot</label>
+              <input type="text" class="form-control" id="book-time" placeholder="e.g. 2:00 PM - 4:40 PM" required>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="App.closeModal('modalBookLab')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Confirm Reservation</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- MODAL: EDIT NBA MARKS -->
+  <div class="modal-overlay" id="modalEditNba">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-certificate text-maroon"></i> Update NBA Criterion Score</h3>
+        <button class="modal-close-btn" onclick="App.closeModal('modalEditNba')">&times;</button>
+      </div>
+      <form id="formEditNba">
+        <input type="hidden" id="editNbaCritId">
+        <div class="modal-body">
+          <div class="font-bold text-slate-800 mb-3" id="editNbaCritName"></div>
+          <div class="text-xs text-muted mb-3">Maximum Marks Allocated: <strong id="editNbaMaxMarks"></strong></div>
+
+          <div class="form-group">
+            <label class="form-label">Obtained Marks</label>
+            <input type="number" class="form-control font-mono font-bold" id="editNbaObtained" min="0" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Audit Readiness Status</label>
+            <select class="form-control" id="editNbaStatus" required>
+              <option value="Audit Ready">Audit Ready (SAR Document Verified)</option>
+              <option value="In Progress">In Progress</option>
+              <option value="Not Evaluated">Not Evaluated</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="App.closeModal('modalEditNba')">Cancel</button>
+          <button type="submit" class="btn btn-primary">Update Score</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       4. TOAST CONTAINER FOR NOTIFICATIONS
+       ========================================================================= -->
+  <div id="toast-container"></div>
+
+
+  <!-- =========================================================================
+       5. APPLICATION SCRIPTS
+       ========================================================================= -->
+  <script src="js/db.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/modules.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
